@@ -1,0 +1,271 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="CPMaster.master.cs" Inherits="ProChicken.cpanel.CPMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Pro-Feed & Pre-Mix</title>
+    <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 10]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Company Has Started Its Business In Pune (Maharashtra)In 2006 . All Production Parameters Are For Export Quality Only , Growing Of Broiler Birds Under Standard Feeding , Good Management &Healthy Environment We Have Our Own Production Farms For Broiler ( Chicken ) And Layers ( Eggs ) Which Is Monitored Under Technical Staff & It Is Leading By Experienced Veterinary Doctors Having 20 To 25 Years Experience In India As Well As International Market." />
+    <meta name="keywords" content="Chiken Shop, Egg Shop, buy chicken online, buy eggs online, pro chiken, profeed, premix" />
+    <meta name="author" content="Jerico Technologies" />
+    <link rel="shortcut icon" href="../assets/images/logo-small.png" type="image/x-icon" />
+    <!-- Favicon icon -->
+    <link rel="icon" href="../assets/images/logo-small.png" type="image/x-icon"/>
+
+    <!-- Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800" rel="stylesheet">
+    <!-- Required Fremwork -->
+    <link rel="stylesheet" type="text/css" href="files\bower_components\bootstrap\css\bootstrap.min.css">
+    <!-- themify-icons line icon -->
+    <link rel="stylesheet" type="text/css" href="files\assets\icon\themify-icons\themify-icons.css">
+    <!-- ico font -->
+    <link rel="stylesheet" type="text/css" href="files\assets\icon\icofont\css\icofont.css">
+    <!-- feather Awesome -->
+    <link rel="stylesheet" type="text/css" href="files\assets\icon\feather\css\feather.css">   
+    <!-- Select 2 css -->
+    <link rel="stylesheet" href="files\bower_components\select2\css\select2.min.css">
+    <!-- Data Table Css -->
+    <link rel="stylesheet" type="text/css" href="files\bower_components\datatables.net-bs4\css\dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="files\assets\pages\data-table\css\buttons.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="files\bower_components\datatables.net-responsive-bs4\css\responsive.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="files\assets\pages\data-table\extensions\buttons\css\buttons.dataTables.min.css">
+    <!-- Style.css -->
+    <link rel="stylesheet" type="text/css" href="files\assets\css\style.css">
+    <link rel="stylesheet" type="text/css" href="files\assets\css\jquery.mCustomScrollbar.css"> 
+
+    <script>        
+        window.setTimeout(function () {
+            $(".alert").fadeTo(500, 0).slideUp(500, function () {
+                $(this).remove();
+            });
+        }, 4000);
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <!-- Pre-loader start -->
+            <div class="theme-loader">
+                <div class="ball-scale">
+                    <div class='contain'>
+                        <div class="ring">
+                            <div class="frame"></div>
+                        </div>
+                        <div class="ring">
+                            <div class="frame"></div>
+                        </div>
+                        <div class="ring">
+                            <div class="frame"></div>
+                        </div>
+                        <div class="ring">
+                            <div class="frame"></div>
+                        </div>
+                        <div class="ring">
+                            <div class="frame"></div>
+                        </div>
+                        <div class="ring">
+                            <div class="frame"></div>
+                        </div>
+                        <div class="ring">
+                            <div class="frame"></div>
+                        </div>
+                        <div class="ring">
+                            <div class="frame"></div>
+                        </div>
+                        <div class="ring">
+                            <div class="frame"></div>
+                        </div>
+                        <div class="ring">
+                            <div class="frame"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Pre-loader end -->
+            <div id="pcoded" class="pcoded">
+                <div class="pcoded-overlay-box"></div>
+                <div class="pcoded-container navbar-wrapper">
+                    <nav class="navbar header-navbar pcoded-header">
+                        <div class="navbar-wrapper">
+
+                            <div class="navbar-logo">
+                                <a class="mobile-menu" id="mobile-collapse" href="#">
+                                    <i class="feather icon-menu"></i>
+                                </a>
+                                <a href="dashboard.aspx">
+                                    <span class="font-weight-bold f-20 pl-2" style="text-shadow: 0px 0px 13px #fff;"><span style="color:#401212">Pro</span><span style="color:#f97c2d">-</span><span style="color:#ffb92e">Chicken</span></span>
+                                </a>
+                                <a class="mobile-options">
+                                    <i class="feather icon-more-horizontal"></i>
+                                </a>
+                            </div>
+
+                            <div class="navbar-container container-fluid">
+                                <ul class="nav-left">
+                                    <li>
+                                        <a href="#" onclick="javascript:toggleFullScreen()">
+                                            <i class="feather icon-maximize full-screen"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="nav-right">
+                                    <li class="user-profile header-notification">
+                                        <div class="dropdown-primary dropdown">
+                                            <div class="dropdown-toggle" data-toggle="dropdown">
+                                                <img src="files\assets\images\avatar-4.jpg" class="img-radius" alt="User-Profile-Image">
+                                                <asp:Label ID="lblUserName" runat="server" Text="Label"></asp:Label>
+                                                <i class="feather icon-chevron-down"></i>
+                                            </div>
+                                            <ul class="show-notification profile-notification dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">                                                
+                                                <li>
+                                                    <a href="Logout.aspx">
+                                                        <i class="feather icon-log-out"></i>Logout
+                                                    </a>
+                                                </li>
+                                            </ul>
+
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <!-- Sidebar inner chat end-->
+                    <div class="pcoded-main-container">
+                        <div class="pcoded-wrapper">
+                            <nav class="pcoded-navbar">
+                                <div class="pcoded-inner-navbar main-menu">
+                                    <div class="pcoded-navigatio-lavel">Navigation</div>
+                                    <ul class="pcoded-item pcoded-left-item">
+                                        <li id="menuDashboard">
+                                            <a href="dashboard.aspx">
+                                                <span class="pcoded-micon"><i class="feather icon-home"></i></span>
+                                                <span class="pcoded-mtext">Dashboard</span>
+                                            </a>
+                                        </li>
+                                        <li id="menuMaster" class="pcoded-hasmenu">
+                                            <a href="javascript:void(0)">   
+                                                <span class="pcoded-micon"><i class="feather icon-user"></i></span>
+                                                <span class="pcoded-mtext">Master</span>
+                                            </a>
+                                            <ul class="pcoded-submenu">
+                                                <li id="menuManageProduct" class="">
+                                                    <a href="manageProduct.aspx">
+                                                        <span class="pcoded-mtext">Manage Products</span>
+                                                    </a>
+                                                </li>
+                                                <li id="menuManageBuildings" class=" ">
+                                                    <a href="manageBuildings.aspx">
+                                                        <span class="pcoded-mtext">Manage Societies</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li id="menuReport" class="pcoded-hasmenu">
+                                            <a href="javascript:void(0)">   
+                                                <span class="pcoded-micon"><i class="feather icon-file-text"></i></span>
+                                                <span class="pcoded-mtext">Reports</span>
+                                            </a>
+                                            <ul class="pcoded-submenu">
+                                                <li id="menuOrderReport" class="">
+                                                    <a href="orderReport.aspx">
+                                                        <span class="pcoded-mtext">Orders List</span>
+                                                    </a>
+                                                </li>
+                                                <li id="menuOrderDetailsReport" class="">
+                                                    <a href="orderDetailReport.aspx">
+                                                        <span class="pcoded-mtext">Orders Details</span>
+                                                    </a>
+                                                </li>
+                                                <li id="menuBuildingOrderReport" class="">
+                                                    <a href="buildingWiseReport.aspx">
+                                                        <span class="pcoded-mtext">Society Wise Report</span>
+                                                    </a>
+                                                </li>
+                                                <li id="menuSocietyOrderReport" class="">
+                                                    <a href="societyWiseReport.aspx">
+                                                        <span class="pcoded-mtext">Society Wise Excel Report</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="pcoded-content">
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    
+    <!-- Warning Section Ends -->
+    <!-- Required Jquery -->
+    <script type="text/javascript" src="files\bower_components\jquery\js\jquery.min.js"></script>
+    <script type="text/javascript" src="files\bower_components\jquery-ui\js\jquery-ui.min.js"></script>
+    <script type="text/javascript" src="files\bower_components\popper.js\js\popper.min.js"></script>
+    <script type="text/javascript" src="files\bower_components\bootstrap\js\bootstrap.min.js"></script>
+    <!-- jquery slimscroll js -->
+    <script type="text/javascript" src="files\bower_components\jquery-slimscroll\js\jquery.slimscroll.js"></script>
+    <!-- modernizr js -->
+    <script type="text/javascript" src="files\bower_components\modernizr\js\modernizr.js"></script>
+
+    <!-- data-table js -->
+    <script src="files\bower_components\datatables.net\js\jquery.dataTables.min.js"></script>
+    <script src="files\bower_components\datatables.net-buttons\js\dataTables.buttons.min.js"></script>
+    <script src="files\assets\pages\data-table\js\jszip.min.js"></script>
+    <script src="files\assets\pages\data-table\js\pdfmake.min.js"></script>
+    <script src="files\assets\pages\data-table\js\vfs_fonts.js"></script>
+    <script src="files\assets\pages\data-table\extensions\buttons\js\dataTables.buttons.min.js"></script>
+    <script src="files\assets\pages\data-table\extensions\buttons\js\buttons.flash.min.js"></script>
+    <script src="files\assets\pages\data-table\extensions\buttons\js\jszip.min.js"></script>
+    <script src="files\assets\pages\data-table\extensions\buttons\js\vfs_fonts.js"></script>
+    <script src="files\assets\pages\data-table\extensions\buttons\js\buttons.colVis.min.js"></script>
+    <script src="files\bower_components\datatables.net-buttons\js\buttons.print.min.js"></script>
+    <script src="files\bower_components\datatables.net-buttons\js\buttons.html5.min.js"></script>
+    <script src="files\bower_components\datatables.net-bs4\js\dataTables.bootstrap4.min.js"></script>
+    <script src="files\bower_components\datatables.net-responsive\js\dataTables.responsive.min.js"></script>
+    <script src="files\bower_components\datatables.net-responsive-bs4\js\responsive.bootstrap4.min.js"></script>
+    <!-- i18next.min.js -->
+    <script type="text/javascript" src="files\bower_components\i18next\js\i18next.min.js"></script>
+    <script type="text/javascript" src="files\bower_components\i18next-xhr-backend\js\i18nextXHRBackend.min.js"></script>
+    <script type="text/javascript" src="files\bower_components\i18next-browser-languagedetector\js\i18nextBrowserLanguageDetector.min.js"></script>
+    <script type="text/javascript" src="files\bower_components\jquery-i18next\js\jquery-i18next.min.js"></script>
+    <!-- Select 2 js -->
+    <script type="text/javascript" src="files\bower_components\select2\js\select2.full.min.js"></script>
+    <!-- Custom js -->
+    <script type="text/javascript" src="files\assets\pages\advance-elements\select2-custom.js"></script>
+    <script src="files\assets\pages\data-table\extensions\buttons\js\extension-btns-custom.js"></script>
+    <script src="files\assets\pages\data-table\js\data-table-custom.js"></script>
+    <script src="files\assets\js\pcoded.min.js"></script>
+    <script src="files\assets\js\vartical-layout.min.js"></script>
+    <script src="files\assets\js\jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="files\assets\js\script.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+</body>
+</html>
